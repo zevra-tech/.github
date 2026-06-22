@@ -1,0 +1,56 @@
+name: "✅ Task"
+description: "Tâche technique à suivre précisément"
+title: "[Task] <titre court>"
+labels: ["task"]
+body:
+  - type: textarea
+    id: objectif
+    attributes:
+      label: Objectif
+      description: Que faut-il accomplir, et pourquoi ?
+      placeholder: Mettre à jour le déploiement k8s pour ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexte
+    attributes:
+      label: Contexte / liens
+      description: Repos, services, URLs, issues liées, docs.
+    validations:
+      required: false
+
+  - type: textarea
+    id: criteres
+    attributes:
+      label: Critères d'acceptation
+      description: Liste de cases cochables — la tâche est finie quand tout est coché.
+      value: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priorite
+    attributes:
+      label: Priorité
+      options:
+        - P0 - Urgent
+        - P1 - Haute
+        - P2 - Normale
+        - P3 - Basse
+    validations:
+      required: true
+
+  - type: input
+    id: estimation
+    attributes:
+      label: Estimation
+      placeholder: "ex. 2h, 1j, 3pts"
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: Comment vérifier
+      description: Étapes ou commandes pour valider que c'est bien fait.
