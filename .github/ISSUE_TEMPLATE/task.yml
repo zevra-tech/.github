@@ -1,7 +1,7 @@
 name: "✅ Task"
 description: "Tâche technique à suivre précisément"
 title: "[Task] <titre court>"
-labels: ["task"]
+type: "Task"
 body:
   - type: textarea
     id: objectif
